@@ -1,9 +1,15 @@
 import React from 'react';
 
 const Form = () => {
+ 
+    // Here i can write javascript and function 
+    const inputTextHandler = (e) => {
+            console.log(e)
+        }
+
     return (
         <form>
-            <input type="text" className="todo-input"/>
+            <input onChange={inputTextHandler} type="text" className="todo-input"/>
             <button className="todo-button" type="submit">
                 <i className="fas fa-plus-square"></i>
             </button>
