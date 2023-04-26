@@ -4,17 +4,17 @@ const Form = () => {
  
     // Here i can write javascript and function 
     const inputTextHandler = (e) => {
-            console.log(e)
+            console.log(e.target.value)
         }
 
     return (
-        <form>
-            <input onChange={inputTextHandler} type="text" className="todo-input"/>
-            <button className="todo-button" type="submit">
-                <i className="fas fa-plus-square"></i>
+        <form className='flex justify-center my-24 mb-12'>
+            <input onChange={inputTextHandler} type="text" className="todo-input rounded"/>
+            <button className="todo-button rounded" type="submit">
+                <i className="fas fa-plus-square bg-orange-600"></i>
             </button>
-            <div className="select">
-                <select name="todos"  className="filter-todo">
+            <div className="select mx-4">
+                <select name="todos"  className="filter-todo align-middle rounded">
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="uncompleted">Uncompleted</option>
