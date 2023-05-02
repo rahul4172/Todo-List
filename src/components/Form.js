@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Form = () => {
+const Form = ({setInputtext}) => {
  
     // Here i can write javascript and function 
     const inputTextHandler = (e) => {
             console.log(e.target.value)
+            setInputtext(e.target.value);
         }
 
     return (
