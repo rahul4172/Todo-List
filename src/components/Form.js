@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form = ({setInputtext}) => {
+const Form = ({setInputtext , todos , setTodos , inputText }) => {
  
     // Here i can write javascript and function 
     const inputTextHandler = (e) => {
@@ -8,10 +8,17 @@ const Form = ({setInputtext}) => {
             setInputtext(e.target.value);
         }
 
+    const submitTodoHandler = (e) => {
+        e.preventDefault();
+        setTodos([...todos , {text:inputText , completed : false , id : Math.random() * 100}]);
+        setInputtext("");
+        console.log(todos);
+    }
+
     return (
         <form className='flex justify-center my-24 mb-12'>
-            <input onChange={inputTextHandler} type="text" className="todo-input rounded"/>
-            <button className="todo-button rounded" type="submit">
+            <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input rounded"/>
+            <button onClick={submitTodoHandler} className="todo-button rounded" type="submit">
                 <i className="fas fa-plus-square bg-orange-600"></i>
             </button>
             <div className="select mx-4">

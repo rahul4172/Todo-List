@@ -14,7 +14,12 @@ function App() {
      <header className="text-center">
       <h1 className='text-center font-semibold text-3xl my-4 '>James's Todo List </h1>
      </header>
-     <Form setInputtext = {setInputtext}/>
+     <Form 
+       setTodos={setTodos} 
+       setInputtext = {setInputtext}
+       inputText = {inputText}
+       todos={todos}
+     />
      <TodoList />
     </div>
   );
