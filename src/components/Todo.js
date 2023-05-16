@@ -1,6 +1,11 @@
 import React from "react";
 
-const Todo = ({text}) => {
+const Todo = ({text ,todo, todos, setTodos}) => {
+    // Events  
+    const deleteHandler = () => {
+        
+        console.log(todo)
+    }
     return (
         <div className="todo ml-32">
              <li className="todo-item">{text}</li>
