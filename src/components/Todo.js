@@ -3,9 +3,20 @@ import React from "react";
 const Todo = ({text ,todo, todos, setTodos}) => {
     // Events  
     const deleteHandler = () => {
-        
-        console.log(todo)
+        setTodos(todos.filter((el) => el.id !== todo.id));
     }
+    const completeHandler = () => {
+        setTodos(todos.map((item) => {
+            if(item.id === todo.id){
+                return {
+                    ...item , complete : !item.completed
+                }
+            }
+            return item;
+        })
+        );
+    };
+
     return (
         <div className="todo ml-32">
              <li className="todo-item">{text}</li>
