@@ -14,6 +14,10 @@ const Form = ({setInputtext , todos , setTodos , inputText }) => {
         setInputtext("");
         console.log(todos);
     }
+    
+    const statusHandler = (e) => {
+
+    }
 
     return (
         <form className='flex justify-center my-24 mb-12'>
@@ -22,7 +26,7 @@ const Form = ({setInputtext , todos , setTodos , inputText }) => {
                 <i className="fas fa-plus-square bg-orange-600"></i>
             </button>
             <div className="select mx-4">
-                <select name="todos"  className="filter-todo align-middle rounded">
+                <select name="todos"  className="filter-todo align-middle rounded" >
                     <option value="all">All</option>
                     <option value="completed">Completed</option>
                     <option value="uncompleted">Uncompleted</option>

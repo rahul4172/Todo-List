@@ -19,11 +19,11 @@ const Todo = ({text ,todo, todos, setTodos}) => {
 
     return (
         <div className="todo ml-32">
-             <li className="todo-item">{text}</li>
-             <button className="complete-btn m-4">
+             <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{text}</li>
+             <button onClick={completeHandler} className="complete-btn m-4">
                 <i className="fas fa-check"></i>
              </button>
-             <button className="trash-btn m-4">
+             <button className="trash-btn m-4" onClick={deleteHandler}>
                 <i className="fas fa-trash"></i>
              </button>
         </div>

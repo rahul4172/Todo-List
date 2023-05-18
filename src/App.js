@@ -7,7 +7,7 @@ function App() {
 
   const [inputText , setInputtext] = useState(""); 
   const[todos,setTodos] = useState([]);
-
+  const[status , setStatus] = useState("all");
 
   return (
     <div className="App bg-gradient-to-r from-yellow-300 to-orange-500 " >
@@ -19,6 +19,7 @@ function App() {
        setInputtext = {setInputtext}
        inputText = {inputText}
        todos={todos}
+       setStatus={setStatus}
      />
      <TodoList 
        setTodos = {setTodos}
